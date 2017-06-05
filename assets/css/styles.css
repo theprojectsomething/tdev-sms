@@ -1,0 +1,921 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  cursor: default; }
+
+abbr[title],
+dfn[title] {
+  cursor: help; }
+
+button,
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="reset"],
+input[type="submit"],
+label[for],
+select {
+  cursor: pointer; }
+
+code {
+  cursor: text; }
+
+button[disabled],
+input[disabled],
+select[disabled] {
+  cursor: default; }
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+progress {
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 0.0625em dotted;
+  text-transform: none; }
+  @supports (text-decoration: dotted underline) {
+    abbr[title] {
+      border-bottom: 0;
+      text-decoration: dotted underline; } }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 60%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.625em; }
+
+img {
+  max-width: 100%; }
+
+img[height],
+img[width] {
+  max-width: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+legend {
+  display: table;
+  white-space: normal;
+  width: 100%; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+fieldset,
+iframe,
+img,
+legend {
+  border: 0; }
+
+h1,
+h2,
+h3,
+h5,
+h6,
+keygen {
+  font-size: 100%; }
+
+menu,
+ol,
+ul {
+  list-style-type: none; }
+
+blockquote,
+body,
+dd,
+dl,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+menu,
+ol,
+p,
+pre,
+ul {
+  margin: 0; }
+
+fieldset,
+legend,
+menu,
+ol,
+ul {
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+@font-face {
+  font-family: Font Family;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/file-name.woff2") format("woff2"), url("../fonts/file-name.woff") format("woff"); }
+
+[data-whatinput="mouse"] :focus,
+[data-whatinput="touch"] :focus {
+  outline: 0; }
+
+html {
+  font-size: 0.875em;
+  color: #111;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.375; }
+  @media screen and (min-width: 20em) {
+    html {
+      font-size: calc(0.875em + 0.25 * (100vw - 20em) / 53.125); } }
+  @media screen and (min-width: 73.125em) {
+    html {
+      font-size: 1.125em; } }
+
+a {
+  color: inherit; }
+  a:hover {
+    text-decoration: none; }
+
+.entry-content {
+  line-height: 1.5; }
+  .entry-content ul {
+    list-style-type: disc; }
+  .entry-content ul {
+    padding-left: 1.5em; }
+  .entry-content li ul {
+    margin: 0; }
+  .entry-content li:not(:last-child) {
+    margin-bottom: 0.5em; }
+
+.stages {
+  position: relative;
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto; }
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, -webkit-transform;
+  transition-property: opacity, visibility, transform;
+  transition-property: opacity, visibility, transform, -webkit-transform;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  width: 100%;
+  overflow: scroll; }
+
+.stage-list {
+  box-shadow: inset -2px 0 5px rgba(0, 0, 0, 0.1); }
+  .stage-list .columns {
+    display: inline-block; }
+    .stage-list .columns:focus ul {
+      display: block; }
+    .stage-list .columns ul {
+      display: none;
+      position: absolute;
+      background: white; }
+    .stage-list .columns label {
+      display: block; }
+  .stage-list th:not(:first-child),
+  .stage-list td:not(:first-child) {
+    white-space: nowrap;
+    min-width: 10em;
+    overflow: hidden;
+    max-width: 10em; }
+    .stage-list th:not(:first-child) label,
+    .stage-list td:not(:first-child) label {
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .stage-list th:not(:first-child):hover,
+    .stage-list td:not(:first-child):hover {
+      position: relative;
+      overflow: visible; }
+      .stage-list th:not(:first-child):hover label,
+      .stage-list td:not(:first-child):hover label {
+        background: white;
+        position: absolute;
+        overflow: visible;
+        z-index: 1;
+        top: 0; }
+  .stage-list input[data-column] {
+    display: none; }
+    .stage-list input[data-column] ~ .data [data-row] {
+      display: none; }
+    .stage-list input[data-column]:checked ~ .data [data-row] {
+      display: inherit; }
+  .stage-list tr[data-phone=""]:not(:first-child) {
+    display: none !important; }
+  .stage-list #toggle-disabled {
+    display: none; }
+    .stage-list #toggle-disabled:checked ~ .data tr[data-phone=""] {
+      display: inherit !important; }
+  .stage-list label[for^="row"] {
+    display: block; }
+  .stage-list input[data-column="1"]:not(:checked) ~ .columns label[for="col-1"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="1"]:not(:checked) ~ .data td:nth-child(2), .stage-list input[data-column="1"]:not(:checked) ~ .data th:nth-child(2) {
+    display: none; }
+  .stage-list input[data-column="2"]:not(:checked) ~ .columns label[for="col-2"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="2"]:not(:checked) ~ .data td:nth-child(3), .stage-list input[data-column="2"]:not(:checked) ~ .data th:nth-child(3) {
+    display: none; }
+  .stage-list input[data-column="3"]:not(:checked) ~ .columns label[for="col-3"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="3"]:not(:checked) ~ .data td:nth-child(4), .stage-list input[data-column="3"]:not(:checked) ~ .data th:nth-child(4) {
+    display: none; }
+  .stage-list input[data-column="4"]:not(:checked) ~ .columns label[for="col-4"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="4"]:not(:checked) ~ .data td:nth-child(5), .stage-list input[data-column="4"]:not(:checked) ~ .data th:nth-child(5) {
+    display: none; }
+  .stage-list input[data-column="5"]:not(:checked) ~ .columns label[for="col-5"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="5"]:not(:checked) ~ .data td:nth-child(6), .stage-list input[data-column="5"]:not(:checked) ~ .data th:nth-child(6) {
+    display: none; }
+  .stage-list input[data-column="6"]:not(:checked) ~ .columns label[for="col-6"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="6"]:not(:checked) ~ .data td:nth-child(7), .stage-list input[data-column="6"]:not(:checked) ~ .data th:nth-child(7) {
+    display: none; }
+  .stage-list input[data-column="7"]:not(:checked) ~ .columns label[for="col-7"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="7"]:not(:checked) ~ .data td:nth-child(8), .stage-list input[data-column="7"]:not(:checked) ~ .data th:nth-child(8) {
+    display: none; }
+  .stage-list input[data-column="8"]:not(:checked) ~ .columns label[for="col-8"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="8"]:not(:checked) ~ .data td:nth-child(9), .stage-list input[data-column="8"]:not(:checked) ~ .data th:nth-child(9) {
+    display: none; }
+  .stage-list input[data-column="9"]:not(:checked) ~ .columns label[for="col-9"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="9"]:not(:checked) ~ .data td:nth-child(10), .stage-list input[data-column="9"]:not(:checked) ~ .data th:nth-child(10) {
+    display: none; }
+  .stage-list input[data-column="10"]:not(:checked) ~ .columns label[for="col-10"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="10"]:not(:checked) ~ .data td:nth-child(11), .stage-list input[data-column="10"]:not(:checked) ~ .data th:nth-child(11) {
+    display: none; }
+  .stage-list input[data-column="11"]:not(:checked) ~ .columns label[for="col-11"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="11"]:not(:checked) ~ .data td:nth-child(12), .stage-list input[data-column="11"]:not(:checked) ~ .data th:nth-child(12) {
+    display: none; }
+  .stage-list input[data-column="12"]:not(:checked) ~ .columns label[for="col-12"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="12"]:not(:checked) ~ .data td:nth-child(13), .stage-list input[data-column="12"]:not(:checked) ~ .data th:nth-child(13) {
+    display: none; }
+  .stage-list input[data-column="13"]:not(:checked) ~ .columns label[for="col-13"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="13"]:not(:checked) ~ .data td:nth-child(14), .stage-list input[data-column="13"]:not(:checked) ~ .data th:nth-child(14) {
+    display: none; }
+  .stage-list input[data-column="14"]:not(:checked) ~ .columns label[for="col-14"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="14"]:not(:checked) ~ .data td:nth-child(15), .stage-list input[data-column="14"]:not(:checked) ~ .data th:nth-child(15) {
+    display: none; }
+  .stage-list input[data-column="15"]:not(:checked) ~ .columns label[for="col-15"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="15"]:not(:checked) ~ .data td:nth-child(16), .stage-list input[data-column="15"]:not(:checked) ~ .data th:nth-child(16) {
+    display: none; }
+  .stage-list input[data-column="16"]:not(:checked) ~ .columns label[for="col-16"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="16"]:not(:checked) ~ .data td:nth-child(17), .stage-list input[data-column="16"]:not(:checked) ~ .data th:nth-child(17) {
+    display: none; }
+  .stage-list input[data-column="17"]:not(:checked) ~ .columns label[for="col-17"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="17"]:not(:checked) ~ .data td:nth-child(18), .stage-list input[data-column="17"]:not(:checked) ~ .data th:nth-child(18) {
+    display: none; }
+  .stage-list input[data-column="18"]:not(:checked) ~ .columns label[for="col-18"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="18"]:not(:checked) ~ .data td:nth-child(19), .stage-list input[data-column="18"]:not(:checked) ~ .data th:nth-child(19) {
+    display: none; }
+  .stage-list input[data-column="19"]:not(:checked) ~ .columns label[for="col-19"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="19"]:not(:checked) ~ .data td:nth-child(20), .stage-list input[data-column="19"]:not(:checked) ~ .data th:nth-child(20) {
+    display: none; }
+  .stage-list input[data-column="20"]:not(:checked) ~ .columns label[for="col-20"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="20"]:not(:checked) ~ .data td:nth-child(21), .stage-list input[data-column="20"]:not(:checked) ~ .data th:nth-child(21) {
+    display: none; }
+  .stage-list input[data-column="21"]:not(:checked) ~ .columns label[for="col-21"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="21"]:not(:checked) ~ .data td:nth-child(22), .stage-list input[data-column="21"]:not(:checked) ~ .data th:nth-child(22) {
+    display: none; }
+  .stage-list input[data-column="22"]:not(:checked) ~ .columns label[for="col-22"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="22"]:not(:checked) ~ .data td:nth-child(23), .stage-list input[data-column="22"]:not(:checked) ~ .data th:nth-child(23) {
+    display: none; }
+  .stage-list input[data-column="23"]:not(:checked) ~ .columns label[for="col-23"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="23"]:not(:checked) ~ .data td:nth-child(24), .stage-list input[data-column="23"]:not(:checked) ~ .data th:nth-child(24) {
+    display: none; }
+  .stage-list input[data-column="24"]:not(:checked) ~ .columns label[for="col-24"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="24"]:not(:checked) ~ .data td:nth-child(25), .stage-list input[data-column="24"]:not(:checked) ~ .data th:nth-child(25) {
+    display: none; }
+  .stage-list input[data-column="25"]:not(:checked) ~ .columns label[for="col-25"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="25"]:not(:checked) ~ .data td:nth-child(26), .stage-list input[data-column="25"]:not(:checked) ~ .data th:nth-child(26) {
+    display: none; }
+  .stage-list input[data-column="26"]:not(:checked) ~ .columns label[for="col-26"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="26"]:not(:checked) ~ .data td:nth-child(27), .stage-list input[data-column="26"]:not(:checked) ~ .data th:nth-child(27) {
+    display: none; }
+  .stage-list input[data-column="27"]:not(:checked) ~ .columns label[for="col-27"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="27"]:not(:checked) ~ .data td:nth-child(28), .stage-list input[data-column="27"]:not(:checked) ~ .data th:nth-child(28) {
+    display: none; }
+  .stage-list input[data-column="28"]:not(:checked) ~ .columns label[for="col-28"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="28"]:not(:checked) ~ .data td:nth-child(29), .stage-list input[data-column="28"]:not(:checked) ~ .data th:nth-child(29) {
+    display: none; }
+  .stage-list input[data-column="29"]:not(:checked) ~ .columns label[for="col-29"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="29"]:not(:checked) ~ .data td:nth-child(30), .stage-list input[data-column="29"]:not(:checked) ~ .data th:nth-child(30) {
+    display: none; }
+  .stage-list input[data-column="30"]:not(:checked) ~ .columns label[for="col-30"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="30"]:not(:checked) ~ .data td:nth-child(31), .stage-list input[data-column="30"]:not(:checked) ~ .data th:nth-child(31) {
+    display: none; }
+  .stage-list input[data-column="31"]:not(:checked) ~ .columns label[for="col-31"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="31"]:not(:checked) ~ .data td:nth-child(32), .stage-list input[data-column="31"]:not(:checked) ~ .data th:nth-child(32) {
+    display: none; }
+  .stage-list input[data-column="32"]:not(:checked) ~ .columns label[for="col-32"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="32"]:not(:checked) ~ .data td:nth-child(33), .stage-list input[data-column="32"]:not(:checked) ~ .data th:nth-child(33) {
+    display: none; }
+  .stage-list input[data-column="33"]:not(:checked) ~ .columns label[for="col-33"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="33"]:not(:checked) ~ .data td:nth-child(34), .stage-list input[data-column="33"]:not(:checked) ~ .data th:nth-child(34) {
+    display: none; }
+  .stage-list input[data-column="34"]:not(:checked) ~ .columns label[for="col-34"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="34"]:not(:checked) ~ .data td:nth-child(35), .stage-list input[data-column="34"]:not(:checked) ~ .data th:nth-child(35) {
+    display: none; }
+  .stage-list input[data-column="35"]:not(:checked) ~ .columns label[for="col-35"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="35"]:not(:checked) ~ .data td:nth-child(36), .stage-list input[data-column="35"]:not(:checked) ~ .data th:nth-child(36) {
+    display: none; }
+  .stage-list input[data-column="36"]:not(:checked) ~ .columns label[for="col-36"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="36"]:not(:checked) ~ .data td:nth-child(37), .stage-list input[data-column="36"]:not(:checked) ~ .data th:nth-child(37) {
+    display: none; }
+  .stage-list input[data-column="37"]:not(:checked) ~ .columns label[for="col-37"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="37"]:not(:checked) ~ .data td:nth-child(38), .stage-list input[data-column="37"]:not(:checked) ~ .data th:nth-child(38) {
+    display: none; }
+  .stage-list input[data-column="38"]:not(:checked) ~ .columns label[for="col-38"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="38"]:not(:checked) ~ .data td:nth-child(39), .stage-list input[data-column="38"]:not(:checked) ~ .data th:nth-child(39) {
+    display: none; }
+  .stage-list input[data-column="39"]:not(:checked) ~ .columns label[for="col-39"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="39"]:not(:checked) ~ .data td:nth-child(40), .stage-list input[data-column="39"]:not(:checked) ~ .data th:nth-child(40) {
+    display: none; }
+  .stage-list input[data-column="40"]:not(:checked) ~ .columns label[for="col-40"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="40"]:not(:checked) ~ .data td:nth-child(41), .stage-list input[data-column="40"]:not(:checked) ~ .data th:nth-child(41) {
+    display: none; }
+  .stage-list input[data-column="41"]:not(:checked) ~ .columns label[for="col-41"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="41"]:not(:checked) ~ .data td:nth-child(42), .stage-list input[data-column="41"]:not(:checked) ~ .data th:nth-child(42) {
+    display: none; }
+  .stage-list input[data-column="42"]:not(:checked) ~ .columns label[for="col-42"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="42"]:not(:checked) ~ .data td:nth-child(43), .stage-list input[data-column="42"]:not(:checked) ~ .data th:nth-child(43) {
+    display: none; }
+  .stage-list input[data-column="43"]:not(:checked) ~ .columns label[for="col-43"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="43"]:not(:checked) ~ .data td:nth-child(44), .stage-list input[data-column="43"]:not(:checked) ~ .data th:nth-child(44) {
+    display: none; }
+  .stage-list input[data-column="44"]:not(:checked) ~ .columns label[for="col-44"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="44"]:not(:checked) ~ .data td:nth-child(45), .stage-list input[data-column="44"]:not(:checked) ~ .data th:nth-child(45) {
+    display: none; }
+  .stage-list input[data-column="45"]:not(:checked) ~ .columns label[for="col-45"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="45"]:not(:checked) ~ .data td:nth-child(46), .stage-list input[data-column="45"]:not(:checked) ~ .data th:nth-child(46) {
+    display: none; }
+  .stage-list input[data-column="46"]:not(:checked) ~ .columns label[for="col-46"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="46"]:not(:checked) ~ .data td:nth-child(47), .stage-list input[data-column="46"]:not(:checked) ~ .data th:nth-child(47) {
+    display: none; }
+  .stage-list input[data-column="47"]:not(:checked) ~ .columns label[for="col-47"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="47"]:not(:checked) ~ .data td:nth-child(48), .stage-list input[data-column="47"]:not(:checked) ~ .data th:nth-child(48) {
+    display: none; }
+  .stage-list input[data-column="48"]:not(:checked) ~ .columns label[for="col-48"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="48"]:not(:checked) ~ .data td:nth-child(49), .stage-list input[data-column="48"]:not(:checked) ~ .data th:nth-child(49) {
+    display: none; }
+  .stage-list input[data-column="49"]:not(:checked) ~ .columns label[for="col-49"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="49"]:not(:checked) ~ .data td:nth-child(50), .stage-list input[data-column="49"]:not(:checked) ~ .data th:nth-child(50) {
+    display: none; }
+  .stage-list input[data-column="50"]:not(:checked) ~ .columns label[for="col-50"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="50"]:not(:checked) ~ .data td:nth-child(51), .stage-list input[data-column="50"]:not(:checked) ~ .data th:nth-child(51) {
+    display: none; }
+  .stage-list input[data-column="51"]:not(:checked) ~ .columns label[for="col-51"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="51"]:not(:checked) ~ .data td:nth-child(52), .stage-list input[data-column="51"]:not(:checked) ~ .data th:nth-child(52) {
+    display: none; }
+  .stage-list input[data-column="52"]:not(:checked) ~ .columns label[for="col-52"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="52"]:not(:checked) ~ .data td:nth-child(53), .stage-list input[data-column="52"]:not(:checked) ~ .data th:nth-child(53) {
+    display: none; }
+  .stage-list input[data-column="53"]:not(:checked) ~ .columns label[for="col-53"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="53"]:not(:checked) ~ .data td:nth-child(54), .stage-list input[data-column="53"]:not(:checked) ~ .data th:nth-child(54) {
+    display: none; }
+  .stage-list input[data-column="54"]:not(:checked) ~ .columns label[for="col-54"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="54"]:not(:checked) ~ .data td:nth-child(55), .stage-list input[data-column="54"]:not(:checked) ~ .data th:nth-child(55) {
+    display: none; }
+  .stage-list input[data-column="55"]:not(:checked) ~ .columns label[for="col-55"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="55"]:not(:checked) ~ .data td:nth-child(56), .stage-list input[data-column="55"]:not(:checked) ~ .data th:nth-child(56) {
+    display: none; }
+  .stage-list input[data-column="56"]:not(:checked) ~ .columns label[for="col-56"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="56"]:not(:checked) ~ .data td:nth-child(57), .stage-list input[data-column="56"]:not(:checked) ~ .data th:nth-child(57) {
+    display: none; }
+  .stage-list input[data-column="57"]:not(:checked) ~ .columns label[for="col-57"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="57"]:not(:checked) ~ .data td:nth-child(58), .stage-list input[data-column="57"]:not(:checked) ~ .data th:nth-child(58) {
+    display: none; }
+  .stage-list input[data-column="58"]:not(:checked) ~ .columns label[for="col-58"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="58"]:not(:checked) ~ .data td:nth-child(59), .stage-list input[data-column="58"]:not(:checked) ~ .data th:nth-child(59) {
+    display: none; }
+  .stage-list input[data-column="59"]:not(:checked) ~ .columns label[for="col-59"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="59"]:not(:checked) ~ .data td:nth-child(60), .stage-list input[data-column="59"]:not(:checked) ~ .data th:nth-child(60) {
+    display: none; }
+  .stage-list input[data-column="60"]:not(:checked) ~ .columns label[for="col-60"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="60"]:not(:checked) ~ .data td:nth-child(61), .stage-list input[data-column="60"]:not(:checked) ~ .data th:nth-child(61) {
+    display: none; }
+  .stage-list input[data-column="61"]:not(:checked) ~ .columns label[for="col-61"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="61"]:not(:checked) ~ .data td:nth-child(62), .stage-list input[data-column="61"]:not(:checked) ~ .data th:nth-child(62) {
+    display: none; }
+  .stage-list input[data-column="62"]:not(:checked) ~ .columns label[for="col-62"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="62"]:not(:checked) ~ .data td:nth-child(63), .stage-list input[data-column="62"]:not(:checked) ~ .data th:nth-child(63) {
+    display: none; }
+  .stage-list input[data-column="63"]:not(:checked) ~ .columns label[for="col-63"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="63"]:not(:checked) ~ .data td:nth-child(64), .stage-list input[data-column="63"]:not(:checked) ~ .data th:nth-child(64) {
+    display: none; }
+  .stage-list input[data-column="64"]:not(:checked) ~ .columns label[for="col-64"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="64"]:not(:checked) ~ .data td:nth-child(65), .stage-list input[data-column="64"]:not(:checked) ~ .data th:nth-child(65) {
+    display: none; }
+  .stage-list input[data-column="65"]:not(:checked) ~ .columns label[for="col-65"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="65"]:not(:checked) ~ .data td:nth-child(66), .stage-list input[data-column="65"]:not(:checked) ~ .data th:nth-child(66) {
+    display: none; }
+  .stage-list input[data-column="66"]:not(:checked) ~ .columns label[for="col-66"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="66"]:not(:checked) ~ .data td:nth-child(67), .stage-list input[data-column="66"]:not(:checked) ~ .data th:nth-child(67) {
+    display: none; }
+  .stage-list input[data-column="67"]:not(:checked) ~ .columns label[for="col-67"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="67"]:not(:checked) ~ .data td:nth-child(68), .stage-list input[data-column="67"]:not(:checked) ~ .data th:nth-child(68) {
+    display: none; }
+  .stage-list input[data-column="68"]:not(:checked) ~ .columns label[for="col-68"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="68"]:not(:checked) ~ .data td:nth-child(69), .stage-list input[data-column="68"]:not(:checked) ~ .data th:nth-child(69) {
+    display: none; }
+  .stage-list input[data-column="69"]:not(:checked) ~ .columns label[for="col-69"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="69"]:not(:checked) ~ .data td:nth-child(70), .stage-list input[data-column="69"]:not(:checked) ~ .data th:nth-child(70) {
+    display: none; }
+  .stage-list input[data-column="70"]:not(:checked) ~ .columns label[for="col-70"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="70"]:not(:checked) ~ .data td:nth-child(71), .stage-list input[data-column="70"]:not(:checked) ~ .data th:nth-child(71) {
+    display: none; }
+  .stage-list input[data-column="71"]:not(:checked) ~ .columns label[for="col-71"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="71"]:not(:checked) ~ .data td:nth-child(72), .stage-list input[data-column="71"]:not(:checked) ~ .data th:nth-child(72) {
+    display: none; }
+  .stage-list input[data-column="72"]:not(:checked) ~ .columns label[for="col-72"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="72"]:not(:checked) ~ .data td:nth-child(73), .stage-list input[data-column="72"]:not(:checked) ~ .data th:nth-child(73) {
+    display: none; }
+  .stage-list input[data-column="73"]:not(:checked) ~ .columns label[for="col-73"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="73"]:not(:checked) ~ .data td:nth-child(74), .stage-list input[data-column="73"]:not(:checked) ~ .data th:nth-child(74) {
+    display: none; }
+  .stage-list input[data-column="74"]:not(:checked) ~ .columns label[for="col-74"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="74"]:not(:checked) ~ .data td:nth-child(75), .stage-list input[data-column="74"]:not(:checked) ~ .data th:nth-child(75) {
+    display: none; }
+  .stage-list input[data-column="75"]:not(:checked) ~ .columns label[for="col-75"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="75"]:not(:checked) ~ .data td:nth-child(76), .stage-list input[data-column="75"]:not(:checked) ~ .data th:nth-child(76) {
+    display: none; }
+  .stage-list input[data-column="76"]:not(:checked) ~ .columns label[for="col-76"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="76"]:not(:checked) ~ .data td:nth-child(77), .stage-list input[data-column="76"]:not(:checked) ~ .data th:nth-child(77) {
+    display: none; }
+  .stage-list input[data-column="77"]:not(:checked) ~ .columns label[for="col-77"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="77"]:not(:checked) ~ .data td:nth-child(78), .stage-list input[data-column="77"]:not(:checked) ~ .data th:nth-child(78) {
+    display: none; }
+  .stage-list input[data-column="78"]:not(:checked) ~ .columns label[for="col-78"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="78"]:not(:checked) ~ .data td:nth-child(79), .stage-list input[data-column="78"]:not(:checked) ~ .data th:nth-child(79) {
+    display: none; }
+  .stage-list input[data-column="79"]:not(:checked) ~ .columns label[for="col-79"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="79"]:not(:checked) ~ .data td:nth-child(80), .stage-list input[data-column="79"]:not(:checked) ~ .data th:nth-child(80) {
+    display: none; }
+  .stage-list input[data-column="80"]:not(:checked) ~ .columns label[for="col-80"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="80"]:not(:checked) ~ .data td:nth-child(81), .stage-list input[data-column="80"]:not(:checked) ~ .data th:nth-child(81) {
+    display: none; }
+  .stage-list input[data-column="81"]:not(:checked) ~ .columns label[for="col-81"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="81"]:not(:checked) ~ .data td:nth-child(82), .stage-list input[data-column="81"]:not(:checked) ~ .data th:nth-child(82) {
+    display: none; }
+  .stage-list input[data-column="82"]:not(:checked) ~ .columns label[for="col-82"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="82"]:not(:checked) ~ .data td:nth-child(83), .stage-list input[data-column="82"]:not(:checked) ~ .data th:nth-child(83) {
+    display: none; }
+  .stage-list input[data-column="83"]:not(:checked) ~ .columns label[for="col-83"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="83"]:not(:checked) ~ .data td:nth-child(84), .stage-list input[data-column="83"]:not(:checked) ~ .data th:nth-child(84) {
+    display: none; }
+  .stage-list input[data-column="84"]:not(:checked) ~ .columns label[for="col-84"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="84"]:not(:checked) ~ .data td:nth-child(85), .stage-list input[data-column="84"]:not(:checked) ~ .data th:nth-child(85) {
+    display: none; }
+  .stage-list input[data-column="85"]:not(:checked) ~ .columns label[for="col-85"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="85"]:not(:checked) ~ .data td:nth-child(86), .stage-list input[data-column="85"]:not(:checked) ~ .data th:nth-child(86) {
+    display: none; }
+  .stage-list input[data-column="86"]:not(:checked) ~ .columns label[for="col-86"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="86"]:not(:checked) ~ .data td:nth-child(87), .stage-list input[data-column="86"]:not(:checked) ~ .data th:nth-child(87) {
+    display: none; }
+  .stage-list input[data-column="87"]:not(:checked) ~ .columns label[for="col-87"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="87"]:not(:checked) ~ .data td:nth-child(88), .stage-list input[data-column="87"]:not(:checked) ~ .data th:nth-child(88) {
+    display: none; }
+  .stage-list input[data-column="88"]:not(:checked) ~ .columns label[for="col-88"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="88"]:not(:checked) ~ .data td:nth-child(89), .stage-list input[data-column="88"]:not(:checked) ~ .data th:nth-child(89) {
+    display: none; }
+  .stage-list input[data-column="89"]:not(:checked) ~ .columns label[for="col-89"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="89"]:not(:checked) ~ .data td:nth-child(90), .stage-list input[data-column="89"]:not(:checked) ~ .data th:nth-child(90) {
+    display: none; }
+  .stage-list input[data-column="90"]:not(:checked) ~ .columns label[for="col-90"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="90"]:not(:checked) ~ .data td:nth-child(91), .stage-list input[data-column="90"]:not(:checked) ~ .data th:nth-child(91) {
+    display: none; }
+  .stage-list input[data-column="91"]:not(:checked) ~ .columns label[for="col-91"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="91"]:not(:checked) ~ .data td:nth-child(92), .stage-list input[data-column="91"]:not(:checked) ~ .data th:nth-child(92) {
+    display: none; }
+  .stage-list input[data-column="92"]:not(:checked) ~ .columns label[for="col-92"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="92"]:not(:checked) ~ .data td:nth-child(93), .stage-list input[data-column="92"]:not(:checked) ~ .data th:nth-child(93) {
+    display: none; }
+  .stage-list input[data-column="93"]:not(:checked) ~ .columns label[for="col-93"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="93"]:not(:checked) ~ .data td:nth-child(94), .stage-list input[data-column="93"]:not(:checked) ~ .data th:nth-child(94) {
+    display: none; }
+  .stage-list input[data-column="94"]:not(:checked) ~ .columns label[for="col-94"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="94"]:not(:checked) ~ .data td:nth-child(95), .stage-list input[data-column="94"]:not(:checked) ~ .data th:nth-child(95) {
+    display: none; }
+  .stage-list input[data-column="95"]:not(:checked) ~ .columns label[for="col-95"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="95"]:not(:checked) ~ .data td:nth-child(96), .stage-list input[data-column="95"]:not(:checked) ~ .data th:nth-child(96) {
+    display: none; }
+  .stage-list input[data-column="96"]:not(:checked) ~ .columns label[for="col-96"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="96"]:not(:checked) ~ .data td:nth-child(97), .stage-list input[data-column="96"]:not(:checked) ~ .data th:nth-child(97) {
+    display: none; }
+  .stage-list input[data-column="97"]:not(:checked) ~ .columns label[for="col-97"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="97"]:not(:checked) ~ .data td:nth-child(98), .stage-list input[data-column="97"]:not(:checked) ~ .data th:nth-child(98) {
+    display: none; }
+  .stage-list input[data-column="98"]:not(:checked) ~ .columns label[for="col-98"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="98"]:not(:checked) ~ .data td:nth-child(99), .stage-list input[data-column="98"]:not(:checked) ~ .data th:nth-child(99) {
+    display: none; }
+  .stage-list input[data-column="99"]:not(:checked) ~ .columns label[for="col-99"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="99"]:not(:checked) ~ .data td:nth-child(100), .stage-list input[data-column="99"]:not(:checked) ~ .data th:nth-child(100) {
+    display: none; }
+  .stage-list input[data-column="100"]:not(:checked) ~ .columns label[for="col-100"] {
+    text-decoration: line-through; }
+  .stage-list input[data-column="100"]:not(:checked) ~ .data td:nth-child(101), .stage-list input[data-column="100"]:not(:checked) ~ .data th:nth-child(101) {
+    display: none; }
+
+[data-route="drive"] .stage-drive,
+[data-route="list"] .stage-list,
+[data-route="compose"] .stage-compose {
+  visibility: visible;
+  opacity: 1; }
+
+[data-route="drive"] .stage-list {
+  -webkit-transform: translateX(2em);
+          transform: translateX(2em); }
+
+[data-route="list"] .stage-drive {
+  -webkit-transform: translateX(-2em);
+          transform: translateX(-2em); }
+
+[data-route="list"] .stage-compose {
+  -webkit-transform: translateX(2em);
+          transform: translateX(2em); }
+
+[data-route="compose"] .stage-list {
+  -webkit-transform: translateX(-2em);
+          transform: translateX(-2em); }
+
+.icon {
+  box-sizing: content-box;
+  fill: currentcolor;
+  height: 1em;
+  vertical-align: top;
+  width: 1em; }
+
+.heading {
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase; }
+
+.heading--1 {
+  font-size: 2.369em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--1 {
+      font-size: calc(2.369em + 1.006 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--1 {
+      font-size: 3.375em; } }
+
+.heading--2 {
+  font-size: 1.777em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--2 {
+      font-size: calc(1.777em + 0.473 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--2 {
+      font-size: 2.25em; } }
+
+.heading--3 {
+  font-size: 1.333em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--3 {
+      font-size: calc(1.333em + 0.167 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--3 {
+      font-size: 1.5em; } }
+
+.heading--4 {
+  font-size: 1em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--4 {
+      font-size: calc(1em + 0 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--4 {
+      font-size: 1em; } }
+
+.heading--5 {
+  font-size: 0.75em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--5 {
+      font-size: calc(0.75em + -0.083 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--5 {
+      font-size: 0.667em; } }
+
+.heading--6 {
+  font-size: 0.563em; }
+  @media screen and (min-width: 22.85714em) {
+    .heading--6 {
+      font-size: calc(0.563em + -0.119 * (100vw - 22.85714em) / 42.14286); } }
+  @media screen and (min-width: 65em) {
+    .heading--6 {
+      font-size: 0.444em; } }
+
+.canvas {
+  max-width: none;
+  width: 100%; }
+
+
+.u-focus-rings {
+  outline-style: dotted;
+  outline-width: 1px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    
+    .u-focus-rings {
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+      outline-width: 5px; } }
+  [data-whatinput="mouse"]
+  .u-focus-rings,
+  [data-whatinput="touch"]
+  .u-focus-rings {
+    outline: 0; }
+
+
+.u-hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }
+
+a,
+.u-transition {
+  -webkit-transition-duration: 0.125s;
+          transition-duration: 0.125s;
+  -webkit-transition-property: background-color, background-image, border-color, box-shadow, color, opacity, text-shadow, visibility;
+  transition-property: background-color, background-image, border-color, box-shadow, color, opacity, text-shadow, visibility;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
+
+.checkbox,
+.radio,
+.u-visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+
+.u-visually-hidden--focusable:active,
+.u-visually-hidden--focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }

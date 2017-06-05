@@ -1,0 +1,11 @@
+<% if(user.token){ %>
+	
+		<img src="<%= user.picture %>?sz=80" width=40>
+		<%= user.given_name %>
+		<button class="btn btn-login">Logout</button>
+
+<% }else{ %>
+
+		<button class="btn btn-login">Login</button>
+
+<% } %>

@@ -1,0 +1,10 @@
+a {
+  @extend %u-transition;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+

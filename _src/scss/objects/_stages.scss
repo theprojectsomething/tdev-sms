@@ -1,0 +1,149 @@
+.stages {
+	position: relative;
+	width: 100%;
+	max-width: 75em;
+	margin: 0 auto;
+}
+
+.stage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition-duration: 0.2s;
+	transition-property: opacity, visibility, transform;
+	transform: translateX(0);
+	transform-origin: 0 0;
+	width: 100%;
+	overflow: scroll;
+}
+
+.stage-list {
+	box-shadow: inset -2px 0 5px rgba(0,0,0,0.1);
+
+	.columns {
+		display: inline-block;
+
+		&:focus ul {
+			display: block;
+		}
+
+		ul {
+			display: none;
+			position: absolute;
+			background: white;
+		}
+
+		label {
+			display: block;
+		}
+	}
+
+
+	th,
+	td {
+		&:not(:first-child) {
+			white-space: nowrap;
+			min-width: 10em;
+		    overflow: hidden;
+		    max-width: 10em;
+
+		    label {
+		    	text-overflow: ellipsis;
+		    	overflow: hidden;
+		    }
+
+		    &:hover {
+		    	position: relative;
+		    	overflow: visible;
+				
+				label {
+		    		background: white;
+				    position: absolute;
+				    overflow: visible;
+				    z-index: 1;
+				    top: 0;
+		    	}
+		    }
+		}
+	}
+
+	input[data-column] {
+		display: none;
+
+		~ .data [data-row] {
+			display: none;
+		}
+
+		&:checked ~ .data [data-row] {
+			display: inherit;
+		}
+	}
+
+	tr[data-phone=""]:not(:first-child) {
+		display: none !important;
+	}
+
+	#toggle-disabled {
+		display: none;
+
+		&:checked ~ .data tr[data-phone=""] {
+			display: inherit !important;
+		}
+	}
+
+	label[for^="row"] {
+		display: block;
+	}
+
+
+	@for $i from 1 through 100 {
+
+		input[data-column="#{$i}"] {
+
+			&:not(:checked) ~ {
+				.columns label[for="col-#{$i}"] {
+					// display: none;
+					text-decoration: line-through;
+				}
+
+				.data {
+					td, th {
+						&:nth-child(#{$i + 1}) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-route="drive"] .stage-drive,
+[data-route="list"] .stage-list,
+[data-route="compose"] .stage-compose {
+	visibility: visible;
+	opacity: 1;
+}
+
+[data-route="drive"] {
+	.stage-list {
+		transform: translateX(2em);
+	}
+}
+
+[data-route="list"] {
+	.stage-drive {
+		transform: translateX(-2em);
+	}
+	.stage-compose {
+		transform: translateX(2em);
+	}
+}
+
+[data-route="compose"] {
+	.stage-list {
+		transform: translateX(-2em);
+	}
+}

@@ -1,0 +1,57 @@
+<% if(sending){ %>
+	
+	<%= sending.i + 1 %> of <%= sending.total %>
+	
+	<% if(sending.complete){ %>
+
+		Sending <%= sending.i + 1 === sending.total ? 'complete' : 'cancelled' %><br>
+		<a href="compose">Start again</a> 
+	
+	<% } else { %>
+		
+		Sending...
+		<br>
+		<button class="cancel">Cancel</button> 
+
+	<% } %>
+	
+<% } else { %>
+
+<label for="msg">Compose your SMS:</label>
+<textarea id="msg"><%= msg %></textarea>
+<p class="remain"></p>
+
+<% if(recipients.length){ %>
+
+<button class="send">Send to <%= recipients.length %> Recipients</button>
+
+<% } %>
+
+<ul class="recipients">
+	
+<% if(recipients.length) { %>
+
+	<li>
+		<a href="list">Edit Recipients</a>
+	</li>
+
+	<% recipients.forEach(function (recipient) { %>
+
+	<li>
+		<span><%= recipient.name %></span>
+		<span><%= recipient.phone %></span>
+	</li>
+	
+	<% }); %>
+
+<% } else { %>
+
+	<li>
+		<a href="list">Add Recipients</a>
+	</li>
+
+<% } %>
+
+</ul>
+
+<% } %>

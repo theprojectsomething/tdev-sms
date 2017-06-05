@@ -1,0 +1,47 @@
+RewriteEngine On
+
+###
+# Store the base uri in an environment variable %{ENV:BASE}
+# http://stackoverflow.com/a/21027742/720204
+# ---
+# RewriteCond %{ENV:URI} ^$
+RewriteRule ^(.*)$ - [ENV=URI:$1]
+RewriteCond %{ENV:BASE} ^$
+RewriteCond %{ENV:URI}::%{REQUEST_URI} ^(.*)::(.*?)\1$
+RewriteRule ^ - [ENV=BASE:%2]
+####
+
+
+
+###
+# Rewrite base on all missing files, eg. "/dir/doesnt/exist/file.ext" => "/file.ext"
+# ---
+# file or dir doesn't exist
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+# not previously rewritten
+RewriteCond %{QUERY_STRING} !r=1
+# has an extension
+RewriteCond %{REQUEST_URI} \.[^.]+$
+# rewrite to the base
+RewriteRule ^(?:.*?)(\s?(\s?(assets|_src).+)?[^/]*)$ %{ENV:BASE}$1?r=1[R=301,L,QSA]
+####
+
+###
+# Set cookies for javascript
+# ---
+# get the host
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$
+# set the cookie
+RewriteRule ^ - [CO=base:%{ENV:BASE}:%1:1:/]
+####
+
+###
+# Rewrite any directories under the base
+# ---
+# file or dir doesn't exist
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+# rewrite the base
+RewriteRule ^([^\.]*)$ %{ENV:BASE} [L,QSA]
+####

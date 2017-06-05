@@ -1,0 +1,73 @@
+<a href="compose">Compose</a>
+<a href="drive">Google Drive</a>
+
+<h2><%= spreadsheet.name %></h2>
+<input class="filter" value="<%= selected.filter %>">
+
+<input id="toggle-disabled" type=checkbox>
+
+<% rows[0].forEach(function (column, i) { %>
+
+<input id="col-<%= i + 1 %>" data-name="<%= column %>" data-column="<%= i + 1 %>" type=checkbox <%= hidden[column] ? '' : 'checked' %>>
+
+<% }); %>
+
+<nav tabindex=0 class="columns">
+	<label for="columns-toggle">Options</label>
+	<ul>
+
+<% rows[0].forEach(function (column, i) { %>
+
+		<li>
+			<label for="col-<%= i + 1 %>"><%= column %></label>
+		</li>
+
+<% }); %>
+		
+		<li>
+			<label for="toggle-disabled">Toggle invalid rows</label>
+		</li>		
+
+	</ul>
+</nav>
+
+<table class="data">
+
+<% rows.forEach(function (row, i) { %>
+	<% var active = (selected.list || []).indexOf(i) >= 0; %>
+
+	<tr data-status="<%= active ? 'active' : '' %>" data-row="<%= i %>" data-name="<%= row[0].name %>" data-phone="<%= row[0].phone %>" data-text="<%= row.slice(1).join(' ').replace('"', '').toLowerCase() %>">
+
+   		<% if(i){ %>
+
+   			<td>
+   				<input class="checkbox-row" id="row-<%= i %>" type=checkbox <%= row[0].phone ? '' : 'disabled' %> <%= active ? 'checked' : '' %>>
+   			</td>
+
+   			<% row.slice(1).forEach(function (column, ii) { %>
+
+	   		<td>
+	   			<label for="row-<%= i %>"><%= column %></label>
+	   		</td>
+
+			<% }); %>
+
+   		<% } else { %>
+
+   			<th>
+   				<input type=checkbox class="checkbox-toggle">
+   			</th>
+
+   			<% row.forEach(function (column, ii) { %>
+
+		   	<th><%= column %></th>
+
+			<% }); %>
+
+   		<% } %>
+
+	</tr>
+
+<% }); %>
+
+</table>

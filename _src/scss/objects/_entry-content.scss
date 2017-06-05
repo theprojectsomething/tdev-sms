@@ -1,0 +1,19 @@
+.entry-content {
+  line-height: 1.5;
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+  li ul {
+    margin: 0;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}

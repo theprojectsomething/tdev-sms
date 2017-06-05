@@ -1,0 +1,50 @@
+{
+  "name": "boilerplate",
+  "version": "0.1.0",
+
+  "config": {
+    "url": {
+      "som": "http://10.1.1.144/tdev/"
+    },
+    "working": "_src"
+  },
+
+  "scripts": {
+
+
+
+    "*":["<--  SCSS BUILD  -->"],
+        "css:build":        "npm run css:sass -s 2>&1 | npm run css:prefix -s",
+        "css:minify":       "cssmin >assets/css/styles.min.css <assets/css/styles.css",
+        "css:prefix":       "postcss --use autoprefixer -b 'last 2 versions' -o assets/css/styles.css",
+        "css:sass":         "node-sass --include-path ${npm_package_config_working}/scss ${npm_package_config_working}/scss/styles.scss -s",
+        "css:watch":        "watch 'npm run css:build' ${npm_package_config_working}/scss/ --ignoreDotFiles --interval=0.25",
+
+        "css:build:prod":   "npm run css:build -s | npm run css:minify -s",
+        "css:watch:prod":   "watch 'npm run css:build:prod' ${npm_package_config_working}/scss/ --ignoreDotFiles --interval=0.25",
+    "*":["<--  SCSS BUILD  -->"],
+
+
+
+    "*":["<--  HELPERS  -->"],
+        "sync":       "browser-sync start --files 'assets/**/*, _src/js/**/*, !*min.css, !*.map.min, *.html, *.php' --proxy npm_package_config_url",
+        "sync:prod":  "browser-sync start --files '!assets/css/styles.css, !assets/css/*.map.min, assets/*, *.html, *.php' --proxy $npm_package_config_url",
+        "sync:user":  "sleep .5; echo '\\033[1;103;30m Enter your username: \\033[0m'; read user; url=npm_package_config_url_$user && browser-sync start --files 'assets/**/*, _src/js/**/*, _src/templates/**/*, !*min.css, !*.map.min, *.html, *.php' --proxy ${!url}",
+    "*":["<--  HELPERS  -->"],
+
+
+
+    "*":["<--  BUILD  -->"],
+        "build":            "npm run css:build:prod",
+        "build:watch":      "npm run css:watch",
+        "build:watch:prod": "npm run css:watch:prod",
+    "*":["<--  BUILD  -->"],
+
+
+
+    "*":["<--  RUN: a specific environment  -->"],
+        "dev":  "npm run build:watch -s & npm run sync:user -s",
+        "prod": "npm run sync:prod -s & npm run build:watch:prod -s",
+    "*":["<--  RUN  -->"]
+  }
+}

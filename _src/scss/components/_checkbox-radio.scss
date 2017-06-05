@@ -1,0 +1,52 @@
+.checkbox,
+.radio {
+  @extend %u-visually-hidden;
+
+  + label {
+
+    &::before {
+
+    }
+  }
+
+  &:hover + label {
+
+    &::before {
+
+    }
+  }
+
+  &:focus + label {
+
+    &::before {
+
+    }
+  }
+
+  &:checked + label {
+
+    &::before {
+
+    }
+  }
+}
+
+.checkbox {
+
+  + label {
+
+    &::before {
+
+    }
+  }
+}
+
+.radio {
+
+  + label {
+
+    &::before {
+
+    }
+  }
+}

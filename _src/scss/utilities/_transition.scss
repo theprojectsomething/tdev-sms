@@ -1,0 +1,14 @@
+%u-transition,
+.u-transition {
+  transition-duration: 0.125s;
+  transition-property:
+    background-color,
+    background-image,
+    border-color,
+    box-shadow,
+    color,
+    opacity,
+    text-shadow,
+    visibility;
+  transition-timing-function: ease-out;
+}

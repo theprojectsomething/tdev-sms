@@ -1,0 +1,8 @@
+#<FilesMatch \.php$>
+#    SetHandler php56-cgi
+#</FilesMatch>
+
+<FilesMatch "\.(?:json)$">
+	Order allow,deny
+	Deny from all
+</FilesMatch>

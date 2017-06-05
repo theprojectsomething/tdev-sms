@@ -1,0 +1,13 @@
+<a href="compose">Compose</a>
+<a href="list">Back to list</a>
+
+<input class="filter">
+<ul class="list">
+
+<% files.forEach(function (file) { %>
+	
+	<li data-name="<%= file.name.toLowerCase() %>"><button class="file-select" data-id="<%= file.id %>"><%= file.name %></button></li>
+
+<% }); %>
+
+</ul>

@@ -1,0 +1,29 @@
+.heading {
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.heading--1 {
+  @include fluid-type(font-size, 22.85714em, 65em, 2.369em, 3.375em);
+}
+
+.heading--2 {
+  @include fluid-type(font-size, 22.85714em, 65em, 1.777em, 2.25em);
+}
+
+.heading--3 {
+  @include fluid-type(font-size, 22.85714em, 65em, 1.333em, 1.5em);
+}
+
+.heading--4 {
+  @include fluid-type(font-size, 22.85714em, 65em, 1em, 1em);
+}
+
+.heading--5 {
+  @include fluid-type(font-size, 22.85714em, 65em, 0.75em, 0.667em);
+}
+
+.heading--6 {
+  @include fluid-type(font-size, 22.85714em, 65em, 0.563em, 0.444em);
+}
